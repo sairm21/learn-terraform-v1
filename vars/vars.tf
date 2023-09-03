@@ -6,6 +6,15 @@ variable "demo" {
   value = "demo"
 }
 
-variable "variable_in_strig" {
+output "sam" {
+  value = var.sample
+}
+
+output "dem" {
+  value = var.demo
+}
+
+
+output "variable_in_strig" {
   value = "value of demo is ${var.demo}"
 }
