@@ -1,1 +1,1 @@
-env = "prod"
+tfvars_env = "prod"
