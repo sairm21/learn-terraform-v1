@@ -1,1 +1,1 @@
-url "learndevops.com"
+url = "learndevops.com"
