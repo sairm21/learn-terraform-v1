@@ -1,9 +1,9 @@
 variable "sample" {
-  value = 100
+  default = 100
 }
 
 variable "demo" {
-  value = "demo"
+  default = "demo"
 }
 
 output "sam" {
