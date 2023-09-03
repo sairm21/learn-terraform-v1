@@ -50,3 +50,9 @@ output "gen_ins_types" {
 output "insurance_details" {
   value = var.insurance_details["health"]
 }
+
+variable "tfvars_env" {}
+
+output "tfvars_env_output" {
+  value = var.tfvars_env
+}
