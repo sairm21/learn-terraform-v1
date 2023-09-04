@@ -32,6 +32,15 @@ output "sg_id" {
   value = data.aws_security_group.selected.id
 }
 
+data "aws_ami" "example" {
+  owners = 804838709963
+}
+
+output "ami_data" {
+  value = data.aws_ami.example.creation_date
+}
+
+
 
 
 
