@@ -34,6 +34,7 @@ output "sg_id" {
 
 data "aws_ami" "example" {
   owners = ["973714476881"]
+  most_recent = true
 }
 
 output "ami_data" {
