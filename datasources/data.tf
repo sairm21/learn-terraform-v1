@@ -20,6 +20,17 @@ output "spot_price_time_stamp" {
   value = data.aws_ec2_spot_price.example.spot_price_timestamp
 }
 
+data "aws_security_group" "selected" {
+  name = "allow-all"
+}
+
+output "sg_description" {
+  value = data.aws_security_group.selected.description
+}
+
+output "sg_id" {
+  value = data.aws_security_group.selected.id
+}
 
 
 
