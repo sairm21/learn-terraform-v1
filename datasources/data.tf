@@ -33,7 +33,7 @@ output "sg_id" {
 }
 
 data "aws_ami" "example" {
-  owners = 804838709963
+  owners = ["804838709963"]
 }
 
 output "ami_data" {
