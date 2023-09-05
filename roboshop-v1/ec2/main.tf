@@ -22,7 +22,7 @@ resource "aws_instance" "web" {
 
 resource "aws_route53_record" "www" {
   zone_id = "Z07064001LQWEDMH2WVFL"
-  name    = ${var.name}-dev
+  name    = "${var.name}-dev"
   type    = "A"
   ttl     = 300
   records = [aws_instance.web.private_ip]
