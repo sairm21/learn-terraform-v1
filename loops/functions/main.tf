@@ -49,3 +49,7 @@ output "docker_topics_tasks" {
 output "docker_topics_tasks_message" {
   value = lookup(lookup(var.courses, "docker", null), "topics", "no topics") # insted of null we can use custom message
 }
+
+output "length_4" {
+  value = element(var.length, 4) #element will circle the list again from intial point
+}
