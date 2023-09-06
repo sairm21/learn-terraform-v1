@@ -45,3 +45,7 @@ output "docker_topics" {
 output "docker_topics_tasks" {
   value = lookup(lookup(var.courses, "docker", null), "topics", null) # if topics key in docker map is not available then lookup will through null instead of error
 }
+
+output "docker_topics_tasks_message" {
+  value = lookup(lookup(var.courses, "docker", null), "topics", "no topics") # insted of null we can use custom message
+}
