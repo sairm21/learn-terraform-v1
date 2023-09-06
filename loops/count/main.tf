@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
   ami           = data.aws_ami.example.id
   instance_type = "t3.micro"
-  count = 3
+  count = length(var.instances)
 
   tags = {
     Name = "HelloWorld"
@@ -11,4 +11,8 @@ resource "aws_instance" "web" {
 data "aws_ami" "example" {
   owners = ["973714476881"]
   most_recent = true
+}
+
+variable "instances" {
+  default = ["frontend", "catalogue", "user"]
 }
