@@ -53,3 +53,11 @@ output "docker_topics_tasks_message" {
 output "length_4" {
   value = element(var.length, 4) #element will circle the list again from intial point
 }
+
+variable "conditions" {
+  default = 100
+}
+
+output "condition_output" {
+  value = var.conditions > 50 ? "enough quantity" : "less quantity"
+}
